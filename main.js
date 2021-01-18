@@ -207,11 +207,16 @@ class ExpressionTree {
 
  
         let et = new ExpressionTree();
-        let charArray = (infixToPostfix(tokenize("(5*2)+7")));
+
+        let Expression = "1+2"
+        let charArray = (infixToPostfix(tokenize(Expression)));
         let root = et.constructTree(charArray);
-        console.log("infix expression is");
+        console.log("Recorrido en Preorden");
         et.preorder(root);
+        console.log("Recorrido en Postorden");
+        et.postorder(root);
+        console.log("Y el resultado es:")
+        console.log(eval(Expression))
  
 
 
- 
